@@ -7,7 +7,6 @@ public class GuessTheWord {
         String[] words = new String[] {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear", "pepper", "pineapple", "pumpkin", "potato"};
         int indexRandom = (int)(Math.random()*words.length);
         String guessWord = words[indexRandom];
-        System.out.println(words[indexRandom]);
         Scanner scanner = new Scanner(System.in);
         String userWord;
         char[] helpWord = new char[15];
@@ -24,6 +23,7 @@ public class GuessTheWord {
                     helpWord[i] = guessWord.charAt(i);
                 }
             }
+            System.out.println("Вы не угадали");
             System.out.println(helpWord);
         } while (!words[indexRandom].equals(userWord));
 
