@@ -2,10 +2,15 @@ package ru.geekbrain.lesson6;
 
 public class Dog extends Animal{
 
+    private static int count;
     public Dog(String name, int age) {
         super(name, age);
-        countDog++;
+        count++;
 
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     @Override

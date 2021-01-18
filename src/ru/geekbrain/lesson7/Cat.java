@@ -1,15 +1,26 @@
-package ru.geekbrain.lesson6;
+package ru.geekbrain.lesson7;
+
+import ru.geekbrain.lesson6.Animal;
 
 public class Cat extends Animal {
 
     public static final int MAX_RUN = 200;
     public static final int MAX_JUMP = 2;
+    protected int appetite;
     private static int count;
+    protected boolean satiety;
+
 
 
     public Cat(String name, int age) {
         super(name, age);
         count++;
+        this.satiety = false;
+        this.appetite = (int) (Math.random()*16);
+    }
+
+    public int getAppetite() {
+        return appetite;
     }
 
     public static int getCount() {
@@ -38,6 +49,19 @@ public class Cat extends Animal {
         System.out.println(name + " прыгнул/а в воду и утонула");
     }
 
+    public void eat (Plate plate) {
+
+        plate.decreaseFood(getAppetite());
+        if (plate.checkFood) {
+            this.satiety = true;
+            System.out.println("Кот " + name + " съел: " + getAppetite() + " еды");
+        }
+        else  {
+            this.satiety = false;
+            System.out.println("Кот " + name + " не смог поесть, еды не хватило. Кот голодный!");
+        }
+
+    }
+
 
 }
-
