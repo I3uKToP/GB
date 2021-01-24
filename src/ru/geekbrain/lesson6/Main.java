@@ -28,9 +28,9 @@ public class Main {
         dog.swim(8);
         dog1.swim(20);
 
-        showCountCat();
-        showCountDog();
-        showAnimal();
+        System.out.println(Animal.getCount());
+        System.out.println(Dog.getCount());
+        System.out.println(Cat.getCount());
 
     }
 

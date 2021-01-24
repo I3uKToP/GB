@@ -1,8 +1,10 @@
-package ru.geekbrain.lesson6;
+package ru.geekbrain.lesson7;
 
 public abstract class Animal  {
     protected String name;
     protected int age;
+
+
 
     public static int count;
 
@@ -21,4 +23,4 @@ public abstract class Animal  {
     public abstract void jump(double m);
     public abstract void swim(int m);
 
- }
+}
