@@ -14,6 +14,9 @@ public class Main {
             cat.eat(plate);
 
         }
+        StringBuffer string1 = new StringBuffer();
+        StringBuilder stringBuilder = new StringBuilder();
+
 
         plate.showInfo();
         plate.addFood(15);
@@ -44,15 +47,15 @@ public class Main {
         System.out.println("Вырезать строку Java c помощью метода String.substring().");
         System.out.println(string.substring(7,11));
 
+
     }
-
-
-
 
 
     private static void checkWord(String string, String word) {
         if (string.contains(word)) System.out.println("Ваша строка содержит слово \"" + word + "\" ");
         else System.out.println("Ваша строка не содержит слово \" " + word + " \" ");
+
+
     }
 
     private static void checkFistSting(String string, String first) {
